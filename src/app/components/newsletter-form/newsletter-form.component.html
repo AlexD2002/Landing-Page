@@ -1,0 +1,22 @@
+ <section class="form-section">
+    <div class="text">
+        <h3>
+            Fique por dentro de tendências
+        </h3>
+        <p>A Sneakers Center, referência em moda e performance em calçados esportivos, destaca-se como a escolha definitiva para entusiastas de tênis. Com uma ampla variedade de marcas renomadas, nosso centro oferece desde clássicos atemporais até as mais recentes inovações em design e tecnologia. Comprometidos com qualidade, conforto e estilo, nossos produtos atendem às demandas de atletas e fashionistas. Na Sneakers Center, não apenas vendemos tênis, mas também cultivamos uma cultura que celebra a paixão pelos calçados. Nossa equipe apaixonada está pronta para proporcionar uma experiência única, onde cada par conta uma história de estilo e desempenho.</p>
+    </div>
+    <form [formGroup]="newsletterForm">
+        <label for="name">Name</label>
+        <input id="name" formControlName="name"/>
+        <label for="email">Email</label>
+        <input id="email" formControlName="email"/>
+        <btn-primary 
+            btn-text="se inscreva" 
+            variant="secondary"
+            (submit)="onSubmit()"
+            [disabled]="!newsletterForm.valid"
+            [loading]="loading()"
+        >
+        </btn-primary>
+    </form>
+</section>
